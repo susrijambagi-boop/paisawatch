@@ -44,7 +44,7 @@ export default async function MpPage({ params }: { params: Params }) {
   const total = formatCompactINR(stats.total);
 
   return (
-    <div className="space-y-5">
+    <div className="mx-auto max-w-3xl space-y-5">
       <BackLink fallback="/officials" />
       {isDemo && <DemoBanner />}
 

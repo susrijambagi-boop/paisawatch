@@ -38,7 +38,7 @@ export default async function HomePage({
   const stats = computeStats(items);
 
   return (
-    <div className="space-y-5">
+    <div className="mx-auto max-w-3xl space-y-5">
       <section>
         <h1 className="text-2xl font-semibold tracking-tight">{SITE.tagline}</h1>
         <p className="mt-1 text-sm text-slate-600">{SITE.description}</p>

@@ -40,7 +40,7 @@ export default async function MlaPage({ params }: { params: Params }) {
   const scorecard = buildScorecard(mla);
 
   return (
-    <div className="space-y-5">
+    <div className="mx-auto max-w-3xl space-y-5">
       <JsonLd
         data={{
           "@context": "https://schema.org",

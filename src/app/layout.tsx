@@ -65,9 +65,9 @@ export default function RootLayout({
           }}
         />
         <SiteHeader />
-        <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6">{children}</main>
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">{children}</main>
         <footer className="border-t border-slate-200 bg-white">
-          <div className="mx-auto max-w-3xl px-4 py-6 text-xs text-slate-500">
+          <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-slate-500">
             <p>
               {SITE.name} aggregates official MPLADS public-works data
               (data.gov.in / MoSPI) so citizens can follow how public money is

@@ -31,7 +31,7 @@ export default function TransparencyPage() {
   const mla = getMlaStats().total;
 
   return (
-    <div className="space-y-8 text-slate-700">
+    <div className="mx-auto max-w-3xl space-y-8 text-slate-700">
       <section>
         <h1 className="text-2xl font-semibold tracking-tight text-slate-900">
           Why this data is incomplete — and why that matters
