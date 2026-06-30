@@ -7,6 +7,8 @@ import { MlaFilters } from "@/components/MlaFilters";
 import { MpAvatar } from "@/components/MpAvatar";
 import { PartyChip } from "@/components/PartyChip";
 import { Icon } from "@/components/Icon";
+import { InfoTip } from "@/components/InfoTip";
+import { DEFS } from "@/lib/definitions";
 
 export const metadata: Metadata = {
   title: "MLAs",
@@ -43,10 +45,10 @@ export default async function MlasPage({ searchParams }: { searchParams: SearchP
   const stateNames = getMlaStateNames();
 
   const tiles = [
-    { label: "MLAs analysed", value: stats.total.toLocaleString("en-IN") },
-    { label: "States & UTs", value: stats.states.toLocaleString("en-IN") },
-    { label: "With declared cases", value: stats.withCases.toLocaleString("en-IN"), accent: "text-amber-600" },
-    { label: "Crorepati MLAs", value: stats.crorepatis.toLocaleString("en-IN") },
+    { label: "MLAs analysed", value: stats.total.toLocaleString("en-IN"), def: DEFS.coverage },
+    { label: "States & UTs", value: stats.states.toLocaleString("en-IN"), def: "States and union territories whose sitting assembly we cover." },
+    { label: "With declared cases", value: stats.withCases.toLocaleString("en-IN"), accent: "text-amber-600", def: DEFS.declaredCases },
+    { label: "Crorepati MLAs", value: stats.crorepatis.toLocaleString("en-IN"), def: DEFS.crorepati },
   ];
 
   return (
@@ -75,7 +77,10 @@ export default async function MlasPage({ searchParams }: { searchParams: SearchP
         {tiles.map((t) => (
           <div key={t.label} className="rounded-xl bg-white p-4 ring-1 ring-slate-200">
             <div className={`text-2xl font-semibold ${t.accent ?? "text-slate-900"}`}>{t.value}</div>
-            <div className="mt-0.5 text-xs text-slate-500">{t.label}</div>
+            <div className="mt-0.5 flex items-center gap-1 text-xs text-slate-500">
+              {t.label}
+              <InfoTip text={t.def} label={t.label} />
+            </div>
           </div>
         ))}
       </div>

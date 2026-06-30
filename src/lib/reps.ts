@@ -1,4 +1,5 @@
 import dataset from "@/data/mps-affidavits.json";
+import { DEFS } from "./definitions";
 
 // Access layer for the real MP dataset (Lok Sabha 2024). Everything is FACTUAL:
 // affidavit facts (ADR/MyNeta) + performance (PRS) + state link. No invented
@@ -187,6 +188,7 @@ export interface ScorecardItem {
   note?: string;
   tone: "neutral" | "info" | "warn" | "good";
   href?: string; // when present, the value links out (e.g. to the case record)
+  def?: string; // plain-language definition for the InfoTip
 }
 
 const inr = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
@@ -204,11 +206,12 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
         : "No pending cases declared in affidavit.",
       tone: rep.criminalCases > 0 ? "warn" : "good",
       href: rep.criminalCases > 0 ? rep.sourceUrl : undefined,
+      def: DEFS.declaredCases,
     },
-    { label: "Total declared assets", value: inr.format(rep.assets), note: `Higher than ${pct}% of analysed MPs.`, tone: "info", href: rep.sourceUrl },
-    { label: "Total declared liabilities", value: inr.format(rep.liabilities), tone: "neutral", href: rep.sourceUrl },
-    { label: "Net declared worth", value: inr.format(rep.assets - rep.liabilities), tone: "neutral" },
-    { label: "Highest education", value: rep.education || "Not stated", tone: "neutral", href: rep.sourceUrl },
+    { label: "Total declared assets", value: inr.format(rep.assets), note: `Higher than ${pct}% of analysed MPs.`, tone: "info", href: rep.sourceUrl, def: DEFS.assets },
+    { label: "Total declared liabilities", value: inr.format(rep.liabilities), tone: "neutral", href: rep.sourceUrl, def: DEFS.liabilities },
+    { label: "Net declared worth", value: inr.format(rep.assets - rep.liabilities), tone: "neutral", def: DEFS.netWorth },
+    { label: "Highest education", value: rep.education || "Not stated", tone: "neutral", href: rep.sourceUrl, def: DEFS.education },
   ];
 
   if (rep.prs) {
@@ -221,6 +224,7 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
         note: rep.prs.natAttendance != null ? `National average ${rep.prs.natAttendance}%` : undefined,
         tone: cmp(rep.prs.attendance, rep.prs.natAttendance),
         href: rep.prs.url,
+        def: DEFS.attendance,
       },
       {
         label: "Debates participated",
@@ -228,6 +232,7 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
         note: rep.prs.natDebates != null ? `National average ${rep.prs.natDebates}` : undefined,
         tone: cmp(rep.prs.debates, rep.prs.natDebates),
         href: rep.prs.url,
+        def: DEFS.debates,
       },
       {
         label: "Questions asked",
@@ -235,12 +240,14 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
         note: rep.prs.natQuestions != null ? `National average ${rep.prs.natQuestions}` : undefined,
         tone: cmp(rep.prs.questions, rep.prs.natQuestions),
         href: rep.prs.url,
+        def: DEFS.questions,
       },
       {
         label: "Private member's bills",
         value: rep.prs.pmb != null ? String(rep.prs.pmb) : "Not available",
         tone: "neutral",
         href: rep.prs.url,
+        def: DEFS.pmb,
       },
     );
     const idx = activityIndex(rep);
@@ -250,6 +257,7 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
         value: `${idx} / 100`,
         note: "Mechanical composite of attendance, debates & questions vs national averages — not a merit rating.",
         tone: idx >= 50 ? "good" : "info",
+        def: DEFS.activityIndex,
       });
     }
   }

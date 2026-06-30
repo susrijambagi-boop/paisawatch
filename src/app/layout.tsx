@@ -43,6 +43,9 @@ export default function RootLayout({
               state&apos;s reported mix. &ldquo;Spend size&rdquo; reflects rupee
               amount only — never a judgement. Always check the linked source.
             </p>
+            <p className="mt-3 font-medium text-slate-600">
+              A tool built by Vinod Ashok Chinnannavar.
+            </p>
           </div>
         </footer>
       </body>

@@ -6,6 +6,8 @@ import { RepFilters } from "@/components/RepFilters";
 import { MpAvatar } from "@/components/MpAvatar";
 import { PartyChip } from "@/components/PartyChip";
 import { Icon } from "@/components/Icon";
+import { InfoTip } from "@/components/InfoTip";
+import { DEFS } from "@/lib/definitions";
 
 function scoreTone(score: number): string {
   if (score >= 60) return "bg-emerald-100 text-emerald-700";
@@ -54,10 +56,10 @@ export default async function RepsPage({ searchParams }: { searchParams: SearchP
   const educationLevels = getEducationLevels();
 
   const tiles = [
-    { label: "MPs analysed", value: stats.total.toLocaleString("en-IN") },
-    { label: "With declared cases", value: stats.withCases.toLocaleString("en-IN"), accent: "text-amber-600" },
-    { label: "Crorepati MPs", value: stats.withSeriousAssets.toLocaleString("en-IN") },
-    { label: "Median assets", value: formatCompactINR(stats.medianAssets) },
+    { label: "MPs analysed", value: stats.total.toLocaleString("en-IN"), def: DEFS.coverage },
+    { label: "With declared cases", value: stats.withCases.toLocaleString("en-IN"), accent: "text-amber-600", def: DEFS.declaredCases },
+    { label: "Crorepati MPs", value: stats.withSeriousAssets.toLocaleString("en-IN"), def: DEFS.crorepati },
+    { label: "Median assets", value: formatCompactINR(stats.medianAssets), def: DEFS.assets },
   ];
 
   return (
@@ -85,7 +87,10 @@ export default async function RepsPage({ searchParams }: { searchParams: SearchP
         {tiles.map((t) => (
           <div key={t.label} className="rounded-xl bg-white p-4 ring-1 ring-slate-200">
             <div className={`text-2xl font-semibold ${t.accent ?? "text-slate-900"}`}>{t.value}</div>
-            <div className="mt-0.5 text-xs text-slate-500">{t.label}</div>
+            <div className="mt-0.5 flex items-center gap-1 text-xs text-slate-500">
+              {t.label}
+              <InfoTip text={t.def} label={t.label} />
+            </div>
           </div>
         ))}
       </div>

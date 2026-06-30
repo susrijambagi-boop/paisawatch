@@ -5,6 +5,7 @@ import { getRep, buildScorecard, activityIndex, REPS_SOURCE } from "@/lib/reps";
 import { MpAvatar } from "@/components/MpAvatar";
 import { PartyChip } from "@/components/PartyChip";
 import { ScoreDonut, type DonutSegment } from "@/components/ScoreDonut";
+import { InfoTip } from "@/components/InfoTip";
 import { ConstituencyMap } from "@/components/ConstituencyMap";
 import { LatestNews } from "@/components/LatestNews";
 import { SatisfactionPoll } from "@/components/SatisfactionPoll";
@@ -129,7 +130,10 @@ export default async function RepPage({ params }: { params: Params }) {
           {scorecard.map((item) => (
             <div key={item.label} className="flex items-start justify-between gap-4 px-4 py-3">
               <div className="min-w-0">
-                <div className="text-sm text-slate-700">{item.label}</div>
+                <div className="flex items-center gap-1.5 text-sm text-slate-700">
+                  {item.label}
+                  {item.def && <InfoTip text={item.def} label={item.label} />}
+                </div>
                 {item.note && <div className="mt-0.5 text-xs text-slate-400">{item.note}</div>}
               </div>
               <div className={`shrink-0 text-right text-sm font-semibold ${TONE[item.tone]}`}>

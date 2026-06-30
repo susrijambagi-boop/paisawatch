@@ -61,6 +61,14 @@ export default function AboutPage() {
           check data.gov.in; we aim to correct verified errors quickly.
         </p>
       </section>
+
+      <section>
+        <h2 className="text-lg font-semibold text-slate-900">Who built this</h2>
+        <p className="mt-2 text-sm">
+          This is a tool built by <strong>Vinod Ashok Chinnannavar</strong> — an independent civic
+          project to make India&apos;s public data easier for any citizen to read.
+        </p>
+      </section>
     </div>
   );
 }

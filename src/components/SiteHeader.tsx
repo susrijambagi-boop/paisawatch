@@ -3,6 +3,7 @@ import { SITE } from "@/lib/constants";
 import { Icon } from "./Icon";
 
 const NAV = [
+  { href: "/dashboard", label: "Dashboard", icon: "layout-dashboard" },
   { href: "/", label: "Feed", icon: "news" },
   { href: "/map", label: "Map", icon: "map-2" },
   { href: "/reps", label: "MPs", icon: "users" },
