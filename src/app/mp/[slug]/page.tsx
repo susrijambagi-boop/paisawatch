@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getMpBySlug, computeStats } from "@/lib/data";
 import { formatCompactINR } from "@/lib/format";
 import { MpAvatar } from "@/components/MpAvatar";
+import { BackLink } from "@/components/BackLink";
 import { StatTiles } from "@/components/StatTiles";
 import { ExpenditureCard } from "@/components/ExpenditureCard";
 import { SubscribeForm } from "@/components/SubscribeForm";
@@ -44,6 +45,7 @@ export default async function MpPage({ params }: { params: Params }) {
 
   return (
     <div className="space-y-5">
+      <BackLink fallback="/officials" />
       {isDemo && <DemoBanner />}
 
       <section className="rounded-2xl bg-white p-5 ring-1 ring-slate-200">

@@ -1,0 +1,31 @@
+# PaisaWatch
+
+> PaisaWatch is a free, non-partisan civic-transparency tool that makes India's public spending and the records of its elected representatives easy to read. Every figure links to its official source. Built by Vinod Ashok Chinnannavar.
+
+## What it covers
+
+- **MPLADS public-works spending** by state and sector, from data.gov.in (Ministry of Statistics & Programme Implementation).
+- **Members of Parliament (Lok Sabha 2024):** self-declared election-affidavit facts (assets, liabilities, pending criminal cases, education) from ADR/MyNeta, plus attendance, debates and questions from PRS Legislative Research.
+- **MLAs across 30 state assemblies:** self-declared affidavit facts from ADR/MyNeta.
+- A **dashboard** with national analytics, the Union Budget "rupee comes from / goes to" composition, an income-tax estimator, and an inflation-vs-returns calculator.
+- Per-representative **latest news**, a **citizen satisfaction poll**, and **public comments**.
+
+## How to read it (important caveats)
+
+- "Pending criminal cases" are charges declared in an affidavit — NOT convictions.
+- "Declared assets" are self-reported on nomination, not independently audited.
+- Coverage counts like "485 of 543 MPs" mean the rest have no published affidavit — they are not guessed or fabricated.
+- The "activity index" and "spend size" are mechanical, neutral measures — not judgements of merit or wrongdoing.
+
+## Key pages
+
+- Dashboard: https://paisawatch.live/dashboard
+- Members of Parliament: https://paisawatch.live/reps
+- MLAs: https://paisawatch.live/mlas
+- Spending map: https://paisawatch.live/map
+- Coverage & methodology (why data is incomplete): https://paisawatch.live/transparency
+- About: https://paisawatch.live/about
+
+## Sources
+
+data.gov.in (MoSPI), ADR / MyNeta (myneta.info), PRS Legislative Research (prsindia.org), Union Budget / Ministry of Finance (indiabudget.gov.in).

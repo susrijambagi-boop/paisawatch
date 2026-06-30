@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/constants";
 import { SiteHeader } from "@/components/SiteHeader";
+import { JsonLd } from "@/components/JsonLd";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -32,6 +33,33 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-full flex-col bg-slate-50 text-slate-900">
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                name: SITE.name,
+                url: siteUrl,
+                description: SITE.description,
+                inLanguage: "en-IN",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: `${siteUrl}/reps?q={search_term_string}`,
+                  "query-input": "required name=search_term_string",
+                },
+              },
+              {
+                "@type": "Organization",
+                name: SITE.name,
+                url: siteUrl,
+                description: SITE.description,
+                founder: { "@type": "Person", name: "Vinod Ashok Chinnannavar" },
+                areaServed: "IN",
+              },
+            ],
+          }}
+        />
         <SiteHeader />
         <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6">{children}</main>
         <footer className="border-t border-slate-200 bg-white">

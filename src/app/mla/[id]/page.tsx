@@ -10,6 +10,8 @@ import { Comments } from "@/components/Comments";
 import { ShareButton } from "@/components/ShareButton";
 import { Icon } from "@/components/Icon";
 import { InfoTip } from "@/components/InfoTip";
+import { BackLink } from "@/components/BackLink";
+import { JsonLd } from "@/components/JsonLd";
 
 type Params = Promise<{ id: string }>;
 
@@ -39,6 +41,17 @@ export default async function MlaPage({ params }: { params: Params }) {
 
   return (
     <div className="space-y-5">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: mla.name,
+          jobTitle: "Member of Legislative Assembly (MLA)",
+          affiliation: { "@type": "PoliticalParty", name: mla.party },
+          ...(mla.state ? { workLocation: { "@type": "Place", name: `${mla.constituency}, ${mla.state}` } } : {}),
+        }}
+      />
+      <BackLink fallback="/mlas" />
       <section className="rounded-2xl bg-white p-5 ring-1 ring-slate-200">
         <div className="flex items-start gap-4">
           <MpAvatar mp={{ name: mla.name, photoUrl: mla.photoUrl }} size="lg" />

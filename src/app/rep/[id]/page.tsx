@@ -6,6 +6,8 @@ import { MpAvatar } from "@/components/MpAvatar";
 import { PartyChip } from "@/components/PartyChip";
 import { ScoreDonut, type DonutSegment } from "@/components/ScoreDonut";
 import { InfoTip } from "@/components/InfoTip";
+import { BackLink } from "@/components/BackLink";
+import { JsonLd } from "@/components/JsonLd";
 import { ConstituencyMap } from "@/components/ConstituencyMap";
 import { LatestNews } from "@/components/LatestNews";
 import { SatisfactionPoll } from "@/components/SatisfactionPoll";
@@ -61,6 +63,18 @@ export default async function RepPage({ params }: { params: Params }) {
 
   return (
     <div className="space-y-5">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: rep.name,
+          jobTitle: "Member of Parliament (Lok Sabha)",
+          affiliation: { "@type": "PoliticalParty", name: rep.party },
+          memberOf: { "@type": "GovernmentOrganization", name: "Lok Sabha, India" },
+          ...(rep.constituency ? { workLocation: { "@type": "Place", name: rep.constituency } } : {}),
+        }}
+      />
+      <BackLink fallback="/reps" />
       <section className="rounded-2xl bg-white p-5 ring-1 ring-slate-200">
         <div className="flex items-start gap-4">
           <MpAvatar mp={{ name: rep.name, photoUrl: rep.photoUrl }} size="lg" />
