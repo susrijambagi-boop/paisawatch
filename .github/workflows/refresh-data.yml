@@ -1,0 +1,45 @@
+name: Refresh MP/MLA data
+
+# Re-scrapes the vendored affidavit + performance datasets and commits any
+# changes, so the site tracks updates as they appear at the sources.
+#
+# What updates how:
+#   * Affidavit + performance + MLA rosters/photos -> this job, DAILY.
+#   * MPLADS state spending -> fetched live at runtime, cached 6h (always fresh).
+#   * Per-candidate news -> fetched live per profile view, cached 1h.
+# (Truly "the instant the internet changes" isn't possible; daily is the
+# practical cadence for a full multi-source re-scrape.)
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily 03:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Scrape MP data (MyNeta + PRS)
+        run: npx tsx scripts/scrape-myneta.ts
+      - name: Scrape MLA data (all states, with photos)
+        run: npx tsx scripts/scrape-mla.ts all --photos || true
+      - name: Commit if changed
+        run: |
+          git config user.name "paisawatch-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain src/data)" ]; then
+            git add src/data
+            git commit -m "chore: refresh affidavit datasets"
+            git push
+          else
+            echo "No data changes."
+          fi
