@@ -5,7 +5,7 @@
   "house": "Bihar Legislative Assembly",
   "stateName": "Bihar",
   "stateSlug": "bihar",
-  "scrapedAt": "2026-06-29T18:16:42.295Z",
+  "scrapedAt": "2026-06-30T12:01:14.296Z",
   "count": 216,
   "records": [
     {
@@ -831,7 +831,7 @@
       "liabilities": 5185000,
       "sourceUrl": "https://myneta.info/Bihar2025/candidate.php?candidate_id=794",
       "prs": null,
-      "photoUrl": null
+      "photoUrl": "https://myneta.info/images_candidate/Bihar2025/e966161de79cff8ddd858ee4d9d9f9ffaf29bed3.jpg"
     },
     {
       "id": "259",

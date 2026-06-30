@@ -5,7 +5,7 @@
   "house": "Odisha Legislative Assembly",
   "stateName": "Odisha",
   "stateSlug": "odisha",
-  "scrapedAt": "2026-06-29T18:26:40.866Z",
+  "scrapedAt": "2026-06-30T12:02:50.533Z",
   "count": 132,
   "records": [
     {
@@ -606,7 +606,7 @@
       "liabilities": 86100,
       "sourceUrl": "https://myneta.info/Odisha2024/candidate.php?candidate_id=185",
       "prs": null,
-      "photoUrl": null
+      "photoUrl": "https://myneta.info/images_candidate/Odisha2024/eb671ce4911b3f393d28c93fc41200a186112c00.jpg"
     },
     {
       "id": "1007",
