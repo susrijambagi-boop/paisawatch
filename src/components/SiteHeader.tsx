@@ -3,9 +3,10 @@ import { SITE } from "@/lib/constants";
 import { Icon } from "./Icon";
 
 const NAV = [
-  { href: "/dashboard", label: "Dashboard", icon: "layout-dashboard" },
-  { href: "/", label: "Feed", icon: "news" },
+  { href: "/", label: "Dashboard", icon: "layout-dashboard" },
+  { href: "/feed", label: "Feed", icon: "news" },
   { href: "/map", label: "Map", icon: "map-2" },
+  { href: "/tools", label: "Calculators", icon: "calculator" },
   { href: "/reps", label: "MPs", icon: "users" },
   { href: "/mlas", label: "MLAs", icon: "user-star" },
   { href: "/officials", label: "States", icon: "map-pin" },
