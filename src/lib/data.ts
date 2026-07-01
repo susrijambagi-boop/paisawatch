@@ -6,7 +6,7 @@ import type {
 import { demoExpenditures, DEMO_MPS } from "@/data/demo";
 import { getAnonClient, getServiceClient, isSupabaseConfigured } from "./supabase";
 import { scoreRisk } from "./risk";
-import { fetchMpladsRecords } from "./sources/mplads";
+import mpladsData from "@/data/mplads.json";
 
 export type DataSource = "supabase" | "datagovin" | "demo";
 
@@ -21,18 +21,15 @@ export interface FeedResult {
   source: DataSource;
 }
 
-// In-memory cache for the live data.gov.in feed so we don't refetch on every
-// request. The underlying fetch also uses Next's 6h revalidation.
-const LIVE_TTL_MS = 6 * 60 * 60 * 1000;
-let liveCache: { at: number; data: ExpenditureWithMp[] } | null = null;
+// MPLADS spending is read from the vendored dataset (src/data/mplads.json),
+// refreshed daily by scripts/fetch-mplads.ts + the GitHub Action. This keeps
+// production reliable: no rate-limited data.gov.in call at request time (which
+// was intermittently failing on Vercel and falling back to sample data).
+const VENDORED_MPLADS = (mpladsData as { records: ExpenditureWithMp[] }).records ?? [];
 
 async function getLiveData(): Promise<ExpenditureWithMp[]> {
-  if (liveCache && Date.now() - liveCache.at < LIVE_TTL_MS) {
-    return liveCache.data;
-  }
-  const data = await fetchMpladsRecords();
-  liveCache = { at: Date.now(), data };
-  return data;
+  if (VENDORED_MPLADS.length === 0) throw new Error("No vendored MPLADS data");
+  return VENDORED_MPLADS;
 }
 
 export interface Stats {

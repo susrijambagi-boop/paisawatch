@@ -28,6 +28,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Fetch MPLADS spending (data.gov.in)
+        run: npx tsx scripts/fetch-mplads.ts || true
       - name: Scrape MP data (MyNeta + PRS)
         run: npx tsx scripts/scrape-myneta.ts
       - name: Scrape MLA data (all states, with photos)
