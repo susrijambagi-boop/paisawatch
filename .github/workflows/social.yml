@@ -1,0 +1,34 @@
+name: Weekly social drafts
+
+# Auto-drafts ready-to-post captions from the live site numbers into
+# social/weekly-posts.md every Monday, and on demand. You copy/post them — no
+# auto-posting to any platform (that needs your accounts).
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # Mondays 04:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate weekly posts
+        run: npx tsx scripts/gen-social.ts
+      - name: Commit if changed
+        run: |
+          git config user.name "paisawatch-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain social)" ]; then
+            git add social
+            git commit -m "chore: refresh weekly social drafts"
+            git push
+          else
+            echo "No changes."
+          fi
