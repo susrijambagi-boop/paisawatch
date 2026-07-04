@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import { FaqSection } from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: "About & methodology",
@@ -69,6 +70,8 @@ export default function AboutPage() {
           project to make India&apos;s public data easier for any citizen to read.
         </p>
       </section>
+
+      <FaqSection />
     </div>
   );
 }
