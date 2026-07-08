@@ -1,0 +1,189 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PaisaWatch//GTM Launch//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PaisaWatch Launch
+BEGIN:VEVENT
+UID:pw-launch-1@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260708T150000Z
+DTEND:20260708T153000Z
+SUMMARY:PaisaWatch: Soft launch: IG Story + WhatsApp family
+DESCRIPTION:Post the IG Story image. Send the WhatsApp family-group message. Put PaisaWatch on your WhatsApp status. Keep it personal\, not salesy. This is the first ripple.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-2@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260709T033000Z
+DTEND:20260709T034500Z
+SUMMARY:PaisaWatch: X launch thread (pin it)
+DESCRIPTION:Post the 5-tweet launch thread on X. Pin tweet 1 to your profile. Reply to every early comment in the first hour.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-3@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260709T040000Z
+DTEND:20260709T042000Z
+SUMMARY:PaisaWatch: LinkedIn flagship article
+DESCRIPTION:Publish the article 'You got a raise. You might be poorer.' with the banner image and the 5 hashtags. 9 to 11 AM is LinkedIn prime. Reply to every comment today.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-4@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260709T070000Z
+DTEND:20260709T071500Z
+SUMMARY:PaisaWatch: Instagram feed post
+DESCRIPTION:Post the IG feed image (How rich is your MP?). Use the feed caption + hashtags. Lunch\, 12 to 2 PM\, is peak browsing. Put the link in bio.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-5@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260709T143000Z
+DTEND:20260709T144500Z
+SUMMARY:PaisaWatch: Instagram Reel (anchor)
+DESCRIPTION:Post the anchor Reel 'The Receipt' using the reel-cover as thumbnail. Evenings 6 to 9 PM are Reels prime. Pin it to your profile.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-6@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260710T043000Z
+DTEND:20260710T050000Z
+SUMMARY:PaisaWatch: Substack + Facebook + LinkedIn teaser
+DESCRIPTION:Publish the Substack article with its header image and email it to subscribers. Post the Facebook version. Post a short LinkedIn teaser that links the Substack.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-7@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260710T073000Z
+DTEND:20260710T074000Z
+SUMMARY:PaisaWatch: X follow-up
+DESCRIPTION:Quote-tweet your launch thread with the salary-vs-inflation angle and the /tools link. 1 to 3 PM is the X lunch window.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-8@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260711T053000Z
+DTEND:20260711T060000Z
+SUMMARY:PaisaWatch: WhatsApp job/pro groups + Reddit
+DESCRIPTION:Share the value-first message in professional and job WhatsApp groups (lead with the free tools\, disclose you built it). Post the Reddit value post to r/india and r/personalfinanceindia. Reply in comments\, do not drop and leave.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-9@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260711T133000Z
+DTEND:20260711T134000Z
+SUMMARY:PaisaWatch: IG Story rotate (poll)
+DESCRIPTION:Rotate a fresh Story with the poll 'Can you name your MP?'. Add a link sticker to paisawatch.live.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-10@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260712T053000Z
+DTEND:20260712T055000Z
+SUMMARY:PaisaWatch: Facebook groups + IG Reel 2
+DESCRIPTION:Share in local city and community Facebook groups. Post IG Reel 2 (the 2-minute lookup). Weekend late mornings work well for both.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-11@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260713T040000Z
+DTEND:20260713T041500Z
+SUMMARY:PaisaWatch: LinkedIn native post
+DESCRIPTION:Post the native salary-vs-inflation hook (no article\, just the hook + the /tools link). Ask a question at the end to pull comments.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-12@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260714T143000Z
+DTEND:20260714T144500Z
+SUMMARY:PaisaWatch: IG Reel 3 (salary vs inflation)
+DESCRIPTION:Post Reel 3 (your salary vs inflation). Tuesday evening is the single best Reels slot of the week.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:pw-launch-13@paisawatch.live
+DTSTAMP:20260708T143000Z
+DTSTART:20260715T043000Z
+DTEND:20260715T045000Z
+SUMMARY:PaisaWatch: Week-1 recap: LinkedIn + Substack
+DESCRIPTION:Recap week one. Short LinkedIn follow-up and a Substack note. Share one real look-up you found interesting. No party angle.
+LOCATION:paisawatch.live
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
