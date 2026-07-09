@@ -6,7 +6,7 @@ import { EmiCalculator, SipCalculator, LifetimeTaxCalculator } from "@/component
 export const metadata: Metadata = {
   title: "Money calculators",
   description:
-    "Free Indian money calculators — income tax, EMI, SIP, real returns vs inflation, and your lifetime tax contribution. The tools everyone needs, in plain numbers.",
+    "Free Indian money calculators, income tax, EMI, SIP, real returns vs inflation, and your lifetime tax contribution. The tools everyone needs, in plain numbers.",
 };
 
 export default function ToolsPage() {
@@ -15,7 +15,7 @@ export default function ToolsPage() {
       <section>
         <h1 className="text-2xl font-semibold tracking-tight">Money calculators</h1>
         <p className="mt-1 text-sm text-slate-600">
-          The everyday-money questions most people never sit down to answer — in plain numbers, free,
+          The everyday-money questions most people never sit down to answer, in plain numbers, free,
           with nothing hidden. Every rate is editable, so you can use your own figures.
         </p>
       </section>
@@ -34,7 +34,7 @@ export default function ToolsPage() {
       <section>
         <h2 className="text-base font-semibold">Is your money beating inflation?</h2>
         <p className="mb-3 mt-1 text-xs text-slate-500">
-          Salary, FD, equity, gold, real estate — after tax and inflation, is it actually growing?
+          Salary, FD, equity, gold, real estate, after tax and inflation, is it actually growing?
         </p>
         <RealReturns />
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/constants";
@@ -76,12 +77,24 @@ export default function RootLayout({
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">{children}</main>
         <footer className="border-t border-slate-200 bg-white">
           <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-slate-500">
+            <div className="mb-4 flex items-center gap-2">
+              <Image
+                src="/logo-mark.png"
+                alt={`${SITE.name} logo`}
+                width={28}
+                height={28}
+                className="h-7 w-7 rounded-md"
+              />
+              <span className="text-sm font-semibold tracking-tight text-slate-900">
+                {SITE.name}
+              </span>
+            </div>
             <p>
               {SITE.name} aggregates official MPLADS public-works data
               (data.gov.in / MoSPI) so citizens can follow how public money is
               used. State totals are official; per-sector amounts apply each
               state&apos;s reported mix. &ldquo;Spend size&rdquo; reflects rupee
-              amount only — never a judgement. Always check the linked source.
+              amount only, never a judgement. Always check the linked source.
             </p>
             <p className="mt-3 font-medium text-slate-600">
               A tool built by Vinod Ashok Chinnannavar.

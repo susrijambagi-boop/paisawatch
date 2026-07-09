@@ -1,7 +1,7 @@
 import { LARGE_SPEND_THRESHOLD } from "./constants";
 import type { CategoryKey } from "./types";
 
-// "Spend size" — a simple, honest magnitude score for an amount. This data is
+// "Spend size", a simple, honest magnitude score for an amount. This data is
 // aggregate development spending, so there is nothing inherently suspicious
 // about a large figure; the score just helps surface the biggest line items.
 // Kept as a pure function for easy testing.

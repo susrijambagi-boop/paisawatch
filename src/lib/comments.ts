@@ -2,7 +2,7 @@ import { getAnonClient, getServiceClient, isSupabaseConfigured } from "./supabas
 
 // Public comments on a state's spending. Stored in Supabase when configured;
 // otherwise kept in a process-local store so the feature is demonstrable in
-// development (not durable across serverless instances — production needs the
+// development (not durable across serverless instances, production needs the
 // database).
 
 export interface Comment {

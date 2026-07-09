@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 
 // Share to the channels Indians actually use. Instagram and Snapchat have no
 // web "share a link" URL, so they're reached via the native share sheet (which
-// lists them on mobile) — the rest are direct intents.
+// lists them on mobile), the rest are direct intents.
 export function ShareButton({
   url,
   text,

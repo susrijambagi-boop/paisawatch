@@ -54,7 +54,7 @@ export function EmiCalculator() {
         <Stat label="Total paid" value={formatCompactINR(r.totalPaid)} />
       </div>
       <p className="mt-3 text-xs text-slate-400">
-        Over {years} years you repay {formatCompactINR(r.totalPaid)} on a {formatCompactINR(amount)} loan —{" "}
+        Over {years} years you repay {formatCompactINR(r.totalPaid)} on a {formatCompactINR(amount)} loan,{" "}
         {Math.round((r.totalInterest / amount) * 100)}% of the loan again, in interest.
       </p>
     </Card>
@@ -68,7 +68,7 @@ export function SipCalculator() {
   const [inflation, setInflation] = useState(6);
   const r = useMemo(() => sip(monthly, rate, years, inflation), [monthly, rate, years, inflation]);
   return (
-    <Card title="SIP / monthly investing" subtitle="What small monthly investments grow into — and their real, inflation-adjusted worth.">
+    <Card title="SIP / monthly investing" subtitle="What small monthly investments grow into, and their real, inflation-adjusted worth.">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <Field label="Monthly investment" value={monthly} onChange={setMonthly} prefix="₹" />
         <Field label="Return %/yr" value={rate} onChange={setRate} />
@@ -82,7 +82,7 @@ export function SipCalculator() {
         <Stat label="In today's money" value={formatCompactINR(r.real)} />
       </div>
       <p className="mt-3 text-xs text-slate-400">
-        {formatINR(monthly)}/month for {years} years becomes {formatCompactINR(r.futureValue)} — worth about{" "}
+        {formatINR(monthly)}/month for {years} years becomes {formatCompactINR(r.futureValue)}, worth about{" "}
         {formatCompactINR(r.real)} in today&apos;s money after inflation. Illustrative; returns aren&apos;t guaranteed.
       </p>
     </Card>
@@ -103,7 +103,7 @@ export function LifetimeTaxCalculator() {
     return Math.round(total);
   }, [income, raise, years]);
   return (
-    <Card title="Your lifetime tax contribution" subtitle="Roughly what you'll hand to the nation over a working life — the roads, schools and defence you help pay for.">
+    <Card title="Your lifetime tax contribution" subtitle="Roughly what you'll hand to the nation over a working life, the roads, schools and defence you help pay for.">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <Field label="Current annual income" value={income} onChange={setIncome} prefix="₹" />
         <Field label="Annual raise %" value={raise} onChange={setRaise} />
@@ -113,7 +113,7 @@ export function LifetimeTaxCalculator() {
         <div className="text-2xl font-semibold text-emerald-700">{formatCompactINR(result)}</div>
         <p className="mt-1 text-sm text-slate-600">
           Over {years} years you&apos;ll contribute about <strong>{formatCompactINR(result)}</strong> in income
-          tax — money that builds roads, funds schools and defends the country. That&apos;s exactly why where it
+          tax, money that builds roads, funds schools and defends the country. That&apos;s exactly why where it
           goes should be public.
         </p>
       </div>

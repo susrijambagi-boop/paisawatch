@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Icon } from "./Icon";
 
-// "Back" control on detail pages — returns to wherever the user came from,
+// "Back" control on detail pages, returns to wherever the user came from,
 // with a sensible fallback when there's no history (e.g. opened from a link).
 export function BackLink({ fallback = "/" }: { fallback?: string }) {
   const router = useRouter();

@@ -146,7 +146,7 @@ export default async function DashboardPage() {
         <h2 className="text-base font-semibold">Inflation reality check</h2>
         <p className="mb-3 mt-1 text-xs text-slate-500">
           Is your salary actually growing, and will your savings beat inflation? Everything here is
-          editable — plug in your own numbers.
+          editable, plug in your own numbers.
         </p>
         <RealReturns />
       </section>
@@ -185,9 +185,9 @@ export default async function DashboardPage() {
                 <tr key={state} className="border-b border-slate-50 last:border-0">
                   <td className="px-4 py-3 font-medium text-slate-800">{state}</td>
                   <td className="px-4 py-3 text-right text-slate-700">{formatCompactINR(a.spend)}</td>
-                  <td className="px-4 py-3 text-right text-slate-700">{a.mlas || "—"}</td>
-                  <td className="px-4 py-3 text-right text-slate-700">{a.crore || "—"}</td>
-                  <td className="px-4 py-3 text-right text-amber-600">{a.cases || "—"}</td>
+                  <td className="px-4 py-3 text-right text-slate-700">{a.mlas || "-"}</td>
+                  <td className="px-4 py-3 text-right text-slate-700">{a.crore || "-"}</td>
+                  <td className="px-4 py-3 text-right text-amber-600">{a.cases || "-"}</td>
                 </tr>
               ))}
             </tbody>

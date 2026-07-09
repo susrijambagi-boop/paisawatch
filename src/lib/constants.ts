@@ -18,7 +18,7 @@ export const CATEGORIES: Record<CategoryKey, CategoryMeta> = {
   education: { key: "education", label: "Education", icon: "school", def: "MPLADS works on schools, classrooms and other educational facilities." },
   water: { key: "water", label: "Drinking water", icon: "droplet", def: "MPLADS works that provide drinking-water facilities." },
   sanitation: { key: "sanitation", label: "Sanitation & health", icon: "heart-plus", def: "MPLADS works on sanitation, toilets and public health." },
-  public_facilities: { key: "public_facilities", label: "Public facilities", icon: "building-community", def: "Other public facilities — community halls, street lighting, parks and the like." },
+  public_facilities: { key: "public_facilities", label: "Public facilities", icon: "building-community", def: "Other public facilities, community halls, street lighting, parks and the like." },
   others: { key: "others", label: "Others", icon: "dots", def: "MPLADS works not covered by the named sectors." },
 };
 

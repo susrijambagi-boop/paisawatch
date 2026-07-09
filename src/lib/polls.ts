@@ -2,7 +2,7 @@ import { getAnonClient, getServiceClient, isSupabaseConfigured } from "./supabas
 
 // Citizen satisfaction poll per representative. A simple Satisfied / Not
 // satisfied vote; the "score" is the share that voted satisfied. This is an
-// unscientific, self-selected public poll — NOT a verified survey — and is
+// unscientific, self-selected public poll, NOT a verified survey, and is
 // labelled as such in the UI. Stored in Supabase when configured, otherwise a
 // process-local store for development.
 

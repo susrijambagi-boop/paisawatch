@@ -16,7 +16,7 @@ export default function AboutPage() {
         </h1>
         <p className="mt-2 text-sm">
           {SITE.name} makes it easy for any citizen to see how MPLADS public-works
-          money is spent across India — by state and by sector. Follow a state,
+          money is spent across India, by state and by sector. Follow a state,
           filter the feed, view the spending map, and share what you find.
         </p>
       </section>
@@ -47,7 +47,7 @@ export default function AboutPage() {
         <p className="mt-2 text-sm">
           Each state&apos;s <strong>total</strong> expenditure is the official
           reported figure. The <strong>per-sector</strong> amount applies that
-          state&apos;s reported sector mix to its total — so state totals are
+          state&apos;s reported sector mix to its total, so state totals are
           exact, while the split within a state is a disclosed derivation. The
           &ldquo;small / medium / large&rdquo; label is purely the rupee size of
           a line item; it is <strong>not</strong> a judgement of merit or any
@@ -66,7 +66,7 @@ export default function AboutPage() {
       <section>
         <h2 className="text-lg font-semibold text-slate-900">Who built this</h2>
         <p className="mt-2 text-sm">
-          This is a tool built by <strong>Vinod Ashok Chinnannavar</strong> — an independent civic
+          This is a tool built by <strong>Vinod Ashok Chinnannavar</strong>, an independent civic
           project to make India&apos;s public data easier for any citizen to read.
         </p>
       </section>

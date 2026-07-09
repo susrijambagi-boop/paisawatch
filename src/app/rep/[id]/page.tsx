@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const rep = getRep(id);
   if (!rep) return { title: "MP not found" };
   return {
-    title: `${rep.name} — affidavit & scorecard`,
+    title: `${rep.name}: affidavit & scorecard`,
     description: `${rep.party} · ${rep.constituency}. Self-declared affidavit facts (ADR/MyNeta).`,
   };
 }
@@ -89,7 +89,7 @@ export default async function RepPage({ params }: { params: Params }) {
           </div>
           <ShareButton
             url={`/rep/${rep.id}`}
-            text={`${rep.name} (${rep.party}, ${rep.constituency}) — affidavit facts on PaisaWatch.`}
+            text={`${rep.name} (${rep.party}, ${rep.constituency}), affidavit facts on PaisaWatch.`}
             compact
           />
         </div>
@@ -101,7 +101,7 @@ export default async function RepPage({ params }: { params: Params }) {
             <ScoreDonut score={score} segments={segments} />
             <p className="mt-3 text-xs text-slate-400">
               Mechanical composite of PRS attendance, debates &amp; questions vs national
-              averages — not a rating of merit. Hover a slice for detail.
+              averages, not a rating of merit. Hover a slice for detail.
             </p>
           </div>
         )}
@@ -139,7 +139,7 @@ export default async function RepPage({ params }: { params: Params }) {
       )}
 
       <section>
-        <h2 className="mb-3 text-base font-semibold">Scorecard — affidavit & performance</h2>
+        <h2 className="mb-3 text-base font-semibold">Scorecard: affidavit & performance</h2>
         <div className="divide-y divide-slate-100 rounded-2xl bg-white ring-1 ring-slate-200">
           {scorecard.map((item) => (
             <div key={item.label} className="flex items-start justify-between gap-4 px-4 py-3">
@@ -163,7 +163,7 @@ export default async function RepPage({ params }: { params: Params }) {
           ))}
         </div>
         <p className="mt-2 text-xs text-slate-400">
-          A factual summary from the public affidavit — not a rating of performance or merit. For
+          A factual summary from the public affidavit, not a rating of performance or merit. For
           the full affidavit, open the source link above. Data scraped{" "}
           {new Date(REPS_SOURCE.scrapedAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}.
         </p>

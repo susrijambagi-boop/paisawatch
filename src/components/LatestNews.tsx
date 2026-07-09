@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 import { timeAgo } from "@/lib/format";
 import type { NewsItem } from "@/app/api/news/route";
 
-// Latest news about a representative — aggregated headlines that link out to the
+// Latest news about a representative, aggregated headlines that link out to the
 // source. We don't reproduce articles, and we don't classify them as good/bad;
 // readers judge for themselves.
 export function LatestNews({ name, context }: { name: string; context?: string }) {
@@ -32,7 +32,7 @@ export function LatestNews({ name, context }: { name: string; context?: string }
       </h2>
       <p className="mb-3 text-xs text-slate-500">
         Recent headlines from across the web, matched by name (may include others with the same
-        name). Aggregated, not verified or endorsed — click through to read at the source.
+        name). Aggregated, not verified or endorsed, click through to read at the source.
       </p>
 
       {loading ? (

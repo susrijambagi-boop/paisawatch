@@ -154,7 +154,7 @@ export function getEducationLevels(): string[] {
   return order.filter((o) => present.has(o));
 }
 
-// Transparent composite from PRS metrics only — a mechanical activity score,
+// Transparent composite from PRS metrics only, a mechanical activity score,
 // NOT a rating of an MP's merit or worth. Returns 0-100 or null if no data.
 export function activityIndex(rep: Rep): number | null {
   const p = rep.prs;
@@ -202,7 +202,7 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
       label: "Self-declared pending criminal cases",
       value: String(rep.criminalCases),
       note: rep.criminalCases > 0
-        ? "Pending cases declared in affidavit — not convictions. Click to see the actual cases."
+        ? "Pending cases declared in affidavit, not convictions. Click to see the actual cases."
         : "No pending cases declared in affidavit.",
       tone: rep.criminalCases > 0 ? "warn" : "good",
       href: rep.criminalCases > 0 ? rep.sourceUrl : undefined,
@@ -255,7 +255,7 @@ export function buildScorecard(rep: Rep): ScorecardItem[] {
       items.push({
         label: "Activity index",
         value: `${idx} / 100`,
-        note: "Mechanical composite of attendance, debates & questions vs national averages — not a merit rating.",
+        note: "Mechanical composite of attendance, debates & questions vs national averages, not a merit rating.",
         tone: idx >= 50 ? "good" : "info",
         def: DEFS.activityIndex,
       });

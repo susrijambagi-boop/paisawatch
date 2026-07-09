@@ -1,6 +1,6 @@
 // Representative long-run (~20-year) average ANNUAL nominal returns for major
 // Indian asset classes, their current tax treatment, and long-run CPI inflation.
-// Returns are editable defaults in the calculator — illustrative anchors, not a
+// Returns are editable defaults in the calculator, illustrative anchors, not a
 // precise historical series. Tax rules are FY2025-26 (post Budget-2024 capital
 // gains changes). Sources: MOSPI (CPI), BSE (Sensex), RBI/IBJA (gold),
 // RBI House Price Index, Income-tax Act. Not investment or tax advice.
@@ -30,4 +30,4 @@ export const ASSET_DEFAULTS: AssetDefault[] = [
 ];
 
 export const RETURNS_SOURCE =
-  "Representative long-run averages from public data (MOSPI, BSE, RBI); tax per FY2025-26 rules. Editable — enter your own figures for a precise result. Not investment or tax advice.";
+  "Representative long-run averages from public data (MOSPI, BSE, RBI); tax per FY2025-26 rules. Editable, enter your own figures for a precise result. Not investment or tax advice.";

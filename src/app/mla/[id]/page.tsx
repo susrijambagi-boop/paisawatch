@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const mla = getMla(id);
   if (!mla) return { title: "MLA not found" };
   return {
-    title: `${mla.name} — MLA affidavit`,
+    title: `${mla.name}: MLA affidavit`,
     description: `${mla.party} · ${mla.constituency}, ${mla.state}. Self-declared affidavit facts (ADR/MyNeta).`,
   };
 }
@@ -66,7 +66,7 @@ export default async function MlaPage({ params }: { params: Params }) {
           </div>
           <ShareButton
             url={`/mla/${mla.id}`}
-            text={`${mla.name} (${mla.party}, ${mla.constituency}) — MLA affidavit facts on PaisaWatch.`}
+            text={`${mla.name} (${mla.party}, ${mla.constituency}), MLA affidavit facts on PaisaWatch.`}
             compact
           />
         </div>

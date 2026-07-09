@@ -6,7 +6,7 @@ import { formatINR, formatCompactINR } from "@/lib/format";
 
 const pow = (base: number, exp: number) => Math.pow(base, exp);
 
-// "Is it actually growing?" — compares nominal vs inflation-adjusted (real)
+// "Is it actually growing?", compares nominal vs inflation-adjusted (real)
 // returns for salary and major asset classes. Every rate is editable.
 export function RealReturns() {
   const [inflation, setInflation] = useState(DEFAULT_INFLATION);

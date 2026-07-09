@@ -26,7 +26,7 @@ export async function generateMetadata({
   const ogUrl = `/api/og?name=${encodeURIComponent(mp.name)}&sub=${encodeURIComponent(
     `${mp.party} · ${mp.constituency}`,
   )}&amount=${encodeURIComponent(formatCompactINR(total))}`;
-  const title = `${mp.name} — public spending`;
+  const title = `${mp.name}: public spending`;
   return {
     title,
     description: `${formatCompactINR(total)} tracked across ${expenditures.length} records for ${mp.name} (${mp.constituency}).`,

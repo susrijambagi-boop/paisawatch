@@ -118,7 +118,7 @@ export default async function MlasPage({ searchParams }: { searchParams: SearchP
         ))}
       </div>
       {mlas.length > 120 && (
-        <p className="text-center text-xs text-slate-500">Showing first 120 — refine with search or filters.</p>
+        <p className="text-center text-xs text-slate-500">Showing first 120, refine with search or filters.</p>
       )}
     </div>
   );

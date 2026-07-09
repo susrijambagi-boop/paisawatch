@@ -10,7 +10,7 @@ export function DemoBanner() {
       <p>
         <span className="font-semibold">Sample data.</span> The live
         data.gov.in feed could not be reached, so placeholder figures are shown.
-        Refresh to retry — real records resume automatically once the source is
+        Refresh to retry, real records resume automatically once the source is
         reachable.
       </p>
     </div>

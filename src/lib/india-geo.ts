@@ -14,7 +14,7 @@ type AreaGeometry = TopoPolygon | TopoMultiPolygon;
 
 // Builds India's state outlines from a district-level topology and projects
 // both the states and any (lat,lng) markers into SVG coordinates. Everything
-// runs on the server — only the resulting path strings and x/y points are sent
+// runs on the server, only the resulting path strings and x/y points are sent
 // to the client, so the ~470KB topology never reaches the browser.
 
 const WIDTH = 760;

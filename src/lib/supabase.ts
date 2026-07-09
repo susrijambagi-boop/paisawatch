@@ -11,7 +11,7 @@ export function isSupabaseConfigured(): boolean {
   return Boolean(url && anonKey);
 }
 
-// Server-side client with the service role — bypasses RLS for trusted writes
+// Server-side client with the service role, bypasses RLS for trusted writes
 // (ingestion, subscriptions). NEVER import this into client components.
 export function getServiceClient(): SupabaseClient | null {
   if (!url || !serviceKey) return null;

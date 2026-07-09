@@ -1,5 +1,5 @@
 // A rough income-tax estimate under the FY2025-26 (AY2026-27) NEW regime.
-// Illustrative only — real liability depends on regime choice, deductions,
+// Illustrative only, real liability depends on regime choice, deductions,
 // surcharge, and other income. Figures per Union Budget 2025-26.
 
 export const TAX_YEAR = "FY2025-26 (new regime)";

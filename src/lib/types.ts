@@ -34,7 +34,7 @@ export interface Expenditure {
   amount: number; // in INR (rupees)
   vendor: string;
   note: string;
-  // Where the spend happened (district/place) — drives the map.
+  // Where the spend happened (district/place), drives the map.
   location: string;
   state: string;
   lat: number | null;

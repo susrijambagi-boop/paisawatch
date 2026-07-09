@@ -6,7 +6,7 @@ import { CATEGORIES, SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Spending feed",
   description:
-    "A live feed of India's MPLADS public-works spending by state and sector — filterable, source-linked to data.gov.in.",
+    "A live feed of India's MPLADS public-works spending by state and sector, filterable, source-linked to data.gov.in.",
 };
 import { DemoBanner } from "@/components/DemoBanner";
 import { SourceNote } from "@/components/SourceNote";

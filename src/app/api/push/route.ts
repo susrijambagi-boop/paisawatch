@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { savePushSubscription } from "@/lib/data";
 
-// GET — hand the browser the VAPID public key (or signal push is unconfigured).
+// GET, hand the browser the VAPID public key (or signal push is unconfigured).
 export async function GET() {
   const key = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
   if (!key) {

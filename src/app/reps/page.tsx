@@ -79,7 +79,7 @@ export default async function RepsPage({ searchParams }: { searchParams: SearchP
           and performance from{" "}
           <a className="underline" href="https://prsindia.org/mptrack/18th-lok-sabha" target="_blank" rel="noopener noreferrer">PRS</a>.
           Covers the {stats.total} of 543 Lok Sabha MPs whose affidavits ADR has analysed (the rest
-          aren&apos;t published, so we don&apos;t guess them). &ldquo;Cases&rdquo; are <strong>pending</strong> — not convictions.
+          aren&apos;t published, so we don&apos;t guess them). &ldquo;Cases&rdquo; are <strong>pending</strong>, not convictions.
         </p>
       </div>
 
@@ -138,7 +138,7 @@ export default async function RepsPage({ searchParams }: { searchParams: SearchP
         })}
       </div>
       {reps.length > 120 && (
-        <p className="text-center text-xs text-slate-500">Showing first 120 — refine with search or filters.</p>
+        <p className="text-center text-xs text-slate-500">Showing first 120, refine with search or filters.</p>
       )}
     </div>
   );

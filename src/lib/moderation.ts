@@ -1,5 +1,5 @@
 // Lightweight moderation for public comments. This is a first line of defence,
-// not a complete system — a public deployment should add a durable rate-limit
+// not a complete system, a public deployment should add a durable rate-limit
 // store (e.g. Upstash) and a human review/report queue. See DEPLOY.md.
 
 // Obvious slurs/spam markers. Kept deliberately small and conservative; the
@@ -23,7 +23,7 @@ export function moderateContent(body: string): ModerationResult {
   }
   const urls = body.match(URL_RE);
   if (urls && urls.length > 2) {
-    return { ok: false, reason: "Too many links — looks like spam." };
+    return { ok: false, reason: "Too many links, looks like spam." };
   }
   if (/(.)\1{15,}/.test(body)) {
     return { ok: false, reason: "Comment looks like spam." };

@@ -87,7 +87,7 @@ export function SatisfactionPoll({ subject }: { subject: string }) {
       )}
 
       <p className="mt-3 text-xs text-slate-400">
-        An unscientific, self-selected public poll (one vote per device) — a measure of opinion here,
+        An unscientific, self-selected public poll (one vote per device), a measure of opinion here,
         not a representative survey of the constituency.
       </p>
     </section>

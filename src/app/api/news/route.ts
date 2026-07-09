@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // Per-person latest-news feed. Aggregates recent headlines from Google News
-// (title, source, date, link) and links out — it does NOT reproduce article
+// (title, source, date, link) and links out, it does NOT reproduce article
 // text, classify, or judge. Cached server-side so we don't refetch per view.
 
 export interface NewsItem {

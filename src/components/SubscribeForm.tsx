@@ -35,7 +35,7 @@ export function SubscribeForm({
       setStatus("ok");
       setMessage(
         data.demo
-          ? "Saved (demo mode — email delivery activates once configured)."
+          ? "Saved (demo mode, email delivery activates once configured)."
           : "Subscribed! Check your inbox to confirm.",
       );
       setEmail("");

@@ -62,7 +62,7 @@ export function Comments({ stateSlug, stateName }: { stateSlug: string; stateNam
         )}
       </h2>
       <p className="mb-3 text-xs text-slate-500">
-        Public and moderated. Discuss {stateName}&apos;s spending — keep it civil
+        Public and moderated. Discuss {stateName}&apos;s spending, keep it civil
         and factual.
       </p>
 

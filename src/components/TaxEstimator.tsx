@@ -77,7 +77,7 @@ export function TaxEstimator() {
       )}
 
       <p className="mt-3 text-xs text-slate-400">
-        Rough estimate, {TAX_YEAR}, salaried — before surcharge and other income/deductions; not tax
+        Rough estimate, {TAX_YEAR}, salaried, before surcharge and other income/deductions; not tax
         advice. Allocation applies the Union Budget {BUDGET_YEAR} &ldquo;rupee goes to&rdquo;
         composition to your estimated tax.
       </p>
