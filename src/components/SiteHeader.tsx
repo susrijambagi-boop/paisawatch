@@ -18,8 +18,8 @@ const NAV = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-3xl items-center gap-3 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
             src="/logo-mark.png"
             alt={`${SITE.name} logo`}
@@ -28,9 +28,9 @@ export function SiteHeader() {
             priority
             className="h-8 w-8 rounded-lg"
           />
-          <span className="text-lg font-semibold tracking-tight">{SITE.name}</span>
+          <span className="whitespace-nowrap text-lg font-semibold tracking-tight">{SITE.name}</span>
         </Link>
-        <nav className="ml-auto flex items-center gap-1">
+        <nav className="ml-auto flex items-center gap-1 overflow-x-auto">
           {NAV.map((item) => (
             <Link
               key={item.href}
@@ -38,7 +38,7 @@ export function SiteHeader() {
               className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900"
             >
               <Icon name={item.icon} />
-              <span className="hidden sm:inline">{item.label}</span>
+              <span className="hidden lg:inline">{item.label}</span>
             </Link>
           ))}
         </nav>

@@ -18,9 +18,9 @@ import {
 } from "@/data/budget";
 
 export const metadata: Metadata = {
-  title: { absolute: "PaisaWatch — Track India's public money, taxes & your representatives" },
+  title: { absolute: "PaisaWatch: Track India's public money, taxes and your MP" },
   description:
-    "See where India's tax money goes, what your MP/MLA declared (assets, cases, attendance), and whether your salary beats inflation — one free, source-linked dashboard built on official public data.",
+    "See where India's tax money goes, what your MP or MLA declared (assets, cases, attendance), and whether your salary beats inflation. One free, source-linked dashboard built on official public data.",
 };
 
 export default async function DashboardPage() {
@@ -76,7 +76,7 @@ export default async function DashboardPage() {
         <h1 className="text-2xl font-semibold tracking-tight">India&apos;s public money, in one window</h1>
         <p className="mt-1 text-sm text-slate-600">
           Where your tax goes, what your representatives declared, and whether your money is keeping
-          up with inflation — all from official public data, free and source-linked.
+          up with inflation. All from official public data, free and source-linked.
         </p>
       </section>
 

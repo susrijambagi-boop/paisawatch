@@ -33,7 +33,7 @@ export const DATA_SOURCES = {
 
 export const SITE = {
   name: "PaisaWatch",
-  tagline: "India's public money, on the map",
+  tagline: "Track India's public money, taxes and your MP",
   description:
-    "Track MPLADS public-works spending across India by state and sector, using official data.gov.in records. Follow a state, get alerted on new data, and share the numbers.",
+    "See where India's tax money goes, what your MP or MLA declared, and whether your salary beats inflation. Free, source-linked and non-partisan, built on official public data.",
 };
