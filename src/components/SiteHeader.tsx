@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE } from "@/lib/constants";
 import { Icon } from "./Icon";
 
@@ -19,9 +20,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-3xl items-center gap-3 px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-emerald-600 font-bold text-white">
-            ₹
-          </span>
+          <Image
+            src="/logo-mark.png"
+            alt={`${SITE.name} logo`}
+            width={32}
+            height={32}
+            priority
+            className="h-8 w-8 rounded-lg"
+          />
           <span className="text-lg font-semibold tracking-tight">{SITE.name}</span>
         </Link>
         <nav className="ml-auto flex items-center gap-1">
