@@ -5,8 +5,8 @@
   "house": "Bihar Legislative Assembly",
   "stateName": "Bihar",
   "stateSlug": "bihar",
-  "scrapedAt": "2026-08-04T05:43:01.178Z",
-  "count": 216,
+  "scrapedAt": "2026-08-05T05:42:04.250Z",
+  "count": 217,
   "records": [
     {
       "id": "530",
@@ -1837,6 +1837,21 @@
       "sourceUrl": "https://myneta.info/Bihar2025/candidate.php?candidate_id=2728",
       "prs": null,
       "photoUrl": "https://myneta.info/images_candidate/Bihar2025/9f38da5eaafe36b44646db2cbf7ff26496d0fe7a.jpg"
+    },
+    {
+      "id": "2966",
+      "name": "Prashant Kishor",
+      "constituency": "BANKIPUR : BYE ELECTION ON 30-07-2026",
+      "state": "Bihar",
+      "stateSlug": "bihar",
+      "party": "Jan Suraaj Party",
+      "criminalCases": 8,
+      "education": "Post Graduate",
+      "assets": 2080761506,
+      "liabilities": 63291765,
+      "sourceUrl": "https://myneta.info/Bihar2025/candidate.php?candidate_id=2966",
+      "prs": null,
+      "photoUrl": "https://myneta.info/images_candidate/Bihar2025/48f7d7026eac8bf294deb5bb0e483fcce912fdbd.jpg"
     },
     {
       "id": "2297",

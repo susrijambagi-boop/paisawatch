@@ -5,8 +5,8 @@
   "house": "Madhya Pradesh Legislative Assembly",
   "stateName": "Madhya Pradesh",
   "stateSlug": "madhya-pradesh",
-  "scrapedAt": "2026-08-04T05:44:00.088Z",
-  "count": 208,
+  "scrapedAt": "2026-08-05T05:43:32.290Z",
+  "count": 209,
   "records": [
     {
       "id": "58",
@@ -967,6 +967,21 @@
       "sourceUrl": "https://myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=733",
       "prs": null,
       "photoUrl": "https://myneta.info/images_candidate/MadhyaPradesh2023/1a652cb3ef19256ce80b1172e17f5b8a3d0b1d59.jpg"
+    },
+    {
+      "id": "2984",
+      "name": "Ghanshyam Singh",
+      "constituency": "DATIA : BYE ELECTION ON 30-07-2026",
+      "state": "Madhya Pradesh",
+      "stateSlug": "madhya-pradesh",
+      "party": "INC",
+      "criminalCases": 2,
+      "education": "Post Graduate",
+      "assets": 209226104,
+      "liabilities": 12993164,
+      "sourceUrl": "https://myneta.info/MadhyaPradesh2023/candidate.php?candidate_id=2984",
+      "prs": null,
+      "photoUrl": "https://myneta.info/images_candidate/MadhyaPradesh2023/5e5b1d3ae93e13203a362f459c72c4353529fa41.jpg"
     },
     {
       "id": "678",
