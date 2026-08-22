@@ -4,7 +4,7 @@
     "performance": "https://prsindia.org/mptrack/18th-lok-sabha (PRS Legislative Research)",
     "pcState": "datameet/maps india_pc_2019"
   },
-  "scrapedAt": "2026-08-21T03:45:01.052Z",
+  "scrapedAt": "2026-08-22T03:36:42.432Z",
   "count": 485,
   "records": [
     {
@@ -6150,7 +6150,7 @@
       "sourceUrl": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=417",
       "prs": {
         "attendance": 99,
-        "debates": 48,
+        "debates": 49,
         "questions": 140,
         "pmb": 0,
         "natAttendance": 85,
