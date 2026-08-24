@@ -113,7 +113,7 @@ export default function PrivacyPage() {
         <h2 className="text-lg font-semibold text-slate-900">Contact</h2>
         <p className="mt-2 text-sm">
           Questions about this policy or your data can be sent to{" "}
-          <a className="text-emerald-700 underline" href="mailto:privacy@paisawatch.live">privacy@paisawatch.live</a>.
+          <a className="text-emerald-700 underline" href="mailto:vinodachere@gmail.com">vinodachere@gmail.com</a>.
           We may update this policy from time to time; the date at the top shows when
           it last changed.
         </p>

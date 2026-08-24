@@ -105,7 +105,7 @@ export default function TermsPage() {
           We may update these terms from time to time; the date at the top shows when
           they last changed. These terms are governed by the laws of India. Questions
           can be sent to{" "}
-          <a className="text-emerald-700 underline" href="mailto:privacy@paisawatch.live">privacy@paisawatch.live</a>.
+          <a className="text-emerald-700 underline" href="mailto:vinodachere@gmail.com">vinodachere@gmail.com</a>.
         </p>
       </section>
     </div>
