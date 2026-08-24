@@ -9,6 +9,8 @@ import { HBars } from "@/components/HBars";
 import { TaxEstimator } from "@/components/TaxEstimator";
 import { RealReturns } from "@/components/RealReturns";
 import { InfoTip } from "@/components/InfoTip";
+import { AdUnit } from "@/components/AdUnit";
+import { AD_SLOTS } from "@/lib/ads";
 import { DEFS } from "@/lib/definitions";
 import {
   RUPEE_COMES_FROM,
@@ -114,6 +116,8 @@ export default async function DashboardPage() {
           />
         </div>
       </section>
+
+      <AdUnit slot={AD_SLOTS.inContent} />
 
       {/* Where your tax goes */}
       <section>

@@ -5,6 +5,8 @@ import "./globals.css";
 import { SITE } from "@/lib/constants";
 import { SiteHeader } from "@/components/SiteHeader";
 import { JsonLd } from "@/components/JsonLd";
+import { AdUnit } from "@/components/AdUnit";
+import { adsEnabled, ADSENSE_CLIENT, AD_SLOTS } from "@/lib/ads";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 
@@ -75,6 +77,9 @@ export default function RootLayout({
         />
         <SiteHeader />
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">{children}</main>
+        <div className="mx-auto w-full max-w-6xl px-4">
+          <AdUnit slot={AD_SLOTS.footer} />
+        </div>
         <footer className="border-t border-slate-200 bg-white">
           <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-slate-500">
             <div className="mb-4 flex items-center gap-2">
@@ -102,6 +107,15 @@ export default function RootLayout({
           </div>
         </footer>
         <Analytics />
+        {adsEnabled && (
+          <Script
+            id="adsbygoogle-init"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
