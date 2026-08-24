@@ -10,7 +10,7 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://pa
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const staticPaths = ["", "/feed", "/map", "/tools", "/reps", "/mlas", "/officials", "/transparency", "/about"];
+  const staticPaths = ["", "/feed", "/map", "/tools", "/reps", "/mlas", "/officials", "/transparency", "/about", "/privacy", "/terms"];
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
     url: `${BASE}${p}`,
     lastModified: now,

@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image", title: `${SITE.name}: ${SITE.tagline}`, description: SITE.description },
+  other: adsEnabled ? { "google-adsense-account": ADSENSE_CLIENT } : {},
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
     other: process.env.NEXT_PUBLIC_BING_VERIFICATION
@@ -104,6 +105,12 @@ export default function RootLayout({
             <p className="mt-3 font-medium text-slate-600">
               A tool built by Vinod Ashok Chinnannavar.
             </p>
+            <nav className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-slate-500">
+              <a className="hover:text-slate-800 hover:underline" href="/about">About</a>
+              <a className="hover:text-slate-800 hover:underline" href="/transparency">Coverage</a>
+              <a className="hover:text-slate-800 hover:underline" href="/privacy">Privacy Policy</a>
+              <a className="hover:text-slate-800 hover:underline" href="/terms">Terms of Use</a>
+            </nav>
           </div>
         </footer>
         <Analytics />
