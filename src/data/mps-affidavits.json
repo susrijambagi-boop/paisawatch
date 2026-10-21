@@ -4,7 +4,7 @@
     "performance": "https://prsindia.org/mptrack/18th-lok-sabha (PRS Legislative Research)",
     "pcState": "datameet/maps india_pc_2019"
   },
-  "scrapedAt": "2026-10-20T08:05:42.123Z",
+  "scrapedAt": "2026-10-21T08:11:26.754Z",
   "count": 486,
   "records": [
     {
@@ -10384,16 +10384,7 @@
       "assets": 268988675,
       "liabilities": 11996527,
       "sourceUrl": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8371",
-      "prs": {
-        "attendance": 99,
-        "debates": 25,
-        "questions": 73,
-        "pmb": 0,
-        "natAttendance": 85,
-        "natDebates": 21.5,
-        "natQuestions": 120,
-        "url": "https://prsindia.org/mptrack/18th-lok-sabha/ujjwal-raman-singh"
-      },
+      "prs": null,
       "photoUrl": "https://myneta.info/images_candidate/LokSabha2024/6b2aec7ae3bffa73e4ba3c934f9c2a53c955c1a1.jpg"
     },
     {
