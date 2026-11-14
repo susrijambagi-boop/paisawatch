@@ -4,7 +4,7 @@
     "performance": "https://prsindia.org/mptrack/18th-lok-sabha (PRS Legislative Research)",
     "pcState": "datameet/maps india_pc_2019"
   },
-  "scrapedAt": "2026-11-13T10:25:31.020Z",
+  "scrapedAt": "2026-11-14T09:43:05.737Z",
   "count": 486,
   "records": [
     {
@@ -5879,7 +5879,7 @@
         "natQuestions": 120,
         "url": "https://prsindia.org/mptrack/18th-lok-sabha/madhavaneni-raghunandan-rao"
       },
-      "photoUrl": "https://myneta.info/images_candidate/LokSabha2024/3903a39947232d86f23159db579fa7b0b9b5d415.jpg"
+      "photoUrl": null
     },
     {
       "id": "5120",
@@ -6641,7 +6641,7 @@
         "natQuestions": null,
         "url": "https://prsindia.org/mptrack/18th-lok-sabha/murlidhar-mohol"
       },
-      "photoUrl": "https://myneta.info/images_candidate/LokSabha2024/246ad50edf7eec28b7caae84595601622caf7188.jpg"
+      "photoUrl": null
     },
     {
       "id": "3132",
