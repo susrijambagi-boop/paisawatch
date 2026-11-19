@@ -4,7 +4,7 @@
     "performance": "https://prsindia.org/mptrack/18th-lok-sabha (PRS Legislative Research)",
     "pcState": "datameet/maps india_pc_2019"
   },
-  "scrapedAt": "2026-11-18T10:58:13.484Z",
+  "scrapedAt": "2026-11-19T11:00:29.256Z",
   "count": 486,
   "records": [
     {
@@ -2729,7 +2729,7 @@
         "natQuestions": 120,
         "url": "https://prsindia.org/mptrack/18th-lok-sabha/deepender-singh-hooda"
       },
-      "photoUrl": "https://myneta.info/images_candidate/LokSabha2024/b827367ed536650a5fe4c3b1a920feb0b911c6d3.jpg"
+      "photoUrl": null
     },
     {
       "id": "3666",
@@ -3353,7 +3353,7 @@
       "liabilities": 13800070,
       "sourceUrl": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3547",
       "prs": null,
-      "photoUrl": "https://myneta.info/images_candidate/LokSabha2024/628e3adba043bee52c9b875f2003386fad105986.jpg"
+      "photoUrl": null
     },
     {
       "id": "2310",
